@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /*
-Exercícios sobre os comandos básicos em python
+Exercícios sobre os comandos básicos em C
 */
 
 //1. Faça um programa que imprima o seu nome.
