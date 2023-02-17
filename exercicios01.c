@@ -11,10 +11,23 @@ void imprimir_nome() {
 }
 
 //2. Faça um programa que imprima o produto dos valores 30 e 27.
+void imprimir_produto() {
+    printf("30 * 27 = %d",30*27);
+}
 
 //3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
+void imprimir_media() {
+    float media = (5.0 + 8 + 12)/3;
+    printf("(8+5+12)/3 = %f", media);
+}
 
 //4. Faça um programa que leia e imprima um número inteiro.
+void imprimir_inteiro() {
+    int numero;
+    printf("Informe um núm. inteiro: ");
+    scanf("%d", &numero);
+    printf("Número informado foi %d", numero);
+}
 
 //5. Faça um programa que leia dois números reais e os imprima.
 
@@ -89,6 +102,7 @@ void imprimir_nome() {
 
 int main() {
     imprimir_nome();
+    imprimir_produto();
     return EXIT_SUCCESS;
 }
 
