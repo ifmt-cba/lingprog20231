@@ -103,6 +103,8 @@ void imprimir_inteiro() {
 int main() {
     imprimir_nome();
     imprimir_produto();
+    imprimir_media();
+    imprimir_inteiro();
     return EXIT_SUCCESS;
 }
 
