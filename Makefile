@@ -18,7 +18,7 @@ exercicios1:
 	@echo  Programas da Lista 1
 	@echo =======================
 	@echo Compilando os programas
-	gcc exercicios01.c -o exercicios1
+	gcc exercicios01.c -lm -o exercicios1
 	@echo Tornando o programa executavel
 	chmod +x exercicios1
 	@echo Executando o programa
