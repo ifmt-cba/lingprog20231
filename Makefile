@@ -1,4 +1,4 @@
-all: clean olamundo exercicios1
+all: clean olamundo exercicios1 exercicios2
 
 olamundo:
 	@echo 
@@ -24,9 +24,21 @@ exercicios1:
 	@echo Executando o programa
 	./exercicios1
 
+exercicios2:
+	@echo 
+	@echo =======================
+	@echo  Programas da Lista 2
+	@echo =======================
+	@echo Compilando os programas
+	gcc exercicios02.c -lm -o exercicios2
+	@echo Tornando o programa executavel
+	chmod +x exercicios2
+	@echo Executando o programa
+	./exercicios2
+
 clean:
 	@echo
 	@echo =======================
 	@echo  Apagando os Programas
 	@echo =======================
-	rm -f olamundo exercicios1
+	rm -f olamundo exercicios1 exercicios2

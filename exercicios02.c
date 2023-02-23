@@ -1,17 +1,10 @@
 /*
-EXERCÍCIOSDOCAPÍTULO2
-*/
-
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-
-/*
 EXERCÍCIOS DO CAPÍTULO 2
 */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include<math.h>
 
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 
