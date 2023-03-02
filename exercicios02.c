@@ -6,6 +6,42 @@ EXERCÍCIOS DO CAPÍTULO 2
 #include <stdlib.h>
 #include<math.h>
 
+void exemploSeSenao() {
+	int media = 6;
+	if (media >= 7) {
+		printf("Aprovado");
+	} else {
+		if (media >= 3) {
+			printf("Em Recuperação!");
+			notapf = 5;
+			media = (media + notapf) / 2;
+			if (media >= 5) {
+				printf("Aprovado na Recuperação");
+			} else {
+				printf("Reprovado na Recuperação");
+			}
+		} else {
+			printf("Reprovado");
+		}
+	}
+}
+
+void exemploCaso():
+	int mes = 3;
+	switch(mes) {
+		case 1:
+			printf("Janeiro");
+			break;
+		case 2:
+			printf("Fevereiro");
+			break;
+		case 3:
+			printf("Março");
+			break;
+		default:
+			printf("Cansei, é depois de março!")
+	}
+
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
 	
@@ -185,31 +221,19 @@ void questao25() {
 }
 
 int main() {
-	questao01();
-	questao02();
-	questao03();
-	questao04();
-	questao05();
-	questao06();
-	questao07();
-	questao08();
-	questao09();
-	questao10();
-	questao11();
-	questao12();
-	questao13();
-	questao14();
-	questao15();
-	questao16();
-	questao17();
-	questao18();
-	questao19();
-	questao20();
-	questao21();
-	questao22();
-	questao23();
-	questao24();
-	questao25();
+	int opcao;
+	printf("Digite a questão a ser executada: ");
+	scanf("%d", &opcao);
+	switch (opcao) {
+		case 1:
+			questao01();
+			break;
+		case 2:
+			questao02();
+			break;
+		default:
+			printf("Opção inválida!");
+	}
 	
 	return EXIT_SUCCESS;
 }
