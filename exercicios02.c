@@ -7,13 +7,13 @@ EXERCÍCIOS DO CAPÍTULO 2
 #include<math.h>
 
 void exemploSeSenao() {
-	int media = 6;
-	if (media >= 7) {
+	float media = 6.0;
+	if (media >= 7.0) {
 		printf("Aprovado");
 	} else {
-		if (media >= 3) {
+		if (media >= 3.0) {
 			printf("Em Recuperação!");
-			notapf = 5;
+			float notapf = 5.0;
 			media = (media + notapf) / 2;
 			if (media >= 5) {
 				printf("Aprovado na Recuperação");
@@ -26,7 +26,7 @@ void exemploSeSenao() {
 	}
 }
 
-void exemploCaso():
+void exemploCaso() {
 	int mes = 3;
 	switch(mes) {
 		case 1:
@@ -41,6 +41,7 @@ void exemploCaso():
 		default:
 			printf("Cansei, é depois de março!")
 	}
+}
 
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
