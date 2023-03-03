@@ -39,7 +39,7 @@ void exemploCaso() {
 			printf("Março");
 			break;
 		default:
-			printf("Cansei, é depois de março!")
+			printf("Cansei, é depois de março!");
 	}
 }
 
