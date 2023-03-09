@@ -50,7 +50,17 @@ void questao01() {
 
 //2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.
 void questao02() {
-	
+	int num1, num2, soma;
+	printf("1 Número: ");
+	scanf("%d", &num1);
+	printf("2 Número: ");
+	scanf("%d", &num2);
+	soma = num1 + num2;
+	if (soma > 20) {
+		printf("Resultado: %d",soma+8);
+	} else {
+		printf("Resultado: %d",soma-5);
+	}
 }
 
 //3. Faça um programa que leia um número e imprima uma das duas mensagens: "É múltiplo de 3"ou "Não é múltiplo de 3".
@@ -65,7 +75,15 @@ void questao04() {
 
 //5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 void questao05() {
-	
+	int numero;
+	printf("Informe um número: ");
+	scanf("%d", &numero);
+	//E (&&) OU (||)
+	if (numero % 3 == 0 && numero % 7 == 0) {
+		printf("É divisível por 3 e por 7");
+	} else {
+		printf("NÃO É divisível por 3 e por 7");
+	}
 }
 
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -73,13 +91,30 @@ void questao05() {
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
-	
+	float salario_bruto, valor_prestacao;
+	printf("Salário Bruto: ");
+	scanf("%f", &salario_bruto);
+	printf("Valor da Prestação: ");
+	scanf("%f", &valor_prestacao);
+	float credito = salario_bruto * 0.3;
+	if (valor_prestacao > credito) {
+		printf("Crédito NÃO aprovado!");
+	} else {
+		printf("Crédito Aprovado!");
+	}
 }
 
 //7. Faça um programa que leia um número e indique se o número está compreendido
 //entre 20 e 50 ou não.
 void questao07() {
-	
+	int numero;
+	printf("Número: ");
+	scanf("%d", &numero);
+	if (numero < 20 || numero > 50) {
+		printf("Número não compreendido entre 20 e 50");
+	} else {
+		printf("Número compreendido entre 20 e 50");
+	}
 }
 
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
@@ -204,7 +239,33 @@ void questao22() {
 //Frango 250cal Mousse diet 170cal Suco de melão 100cal
 //Carne 350cal Mousse chocolate 200cal Refrigerante diet 65cal
 void questao23() {
-	
+	const char pratos[100] = "1 - Vegetariano\n2 - Peixe\n3 - Frango\n 4 - Carne\n";
+	const char sobremesas[100] = "1 - Abacaxi\n2 - Sorvete Diet\n3 - Mousse Diet\n4 - Mousse Chocolate\n";
+	const char bebidas[100] = "1 - Chá\n2 - Suco de laranja\n3 - Suco de Melão\n4 - Refrigerante\n";
+	int opcao;
+	printf("Escolha um prato principal:\n");
+	printf("%s", pratos);
+	scanf("%d", &opcao);
+	int calorias = 0;
+	if (opcao == 1) calorias += 180;
+	if (opcao == 2) calorias += 230;
+	if (opcao == 3) calorias += 250;
+	if (opcao == 4) calorias += 350;	
+	printf("Escolha uma sobremesa:\n");
+	printf("%s", sobremesas);
+	scanf("%d", &opcao);
+	if (opcao == 1) calorias += 75;
+	if (opcao == 2) calorias += 110;
+	if (opcao == 3) calorias += 170;
+	if (opcao == 4) calorias += 200;	
+	printf("Escolha uma bebida:\n");
+	printf("%s", bebidas);
+	scanf("%d", &opcao);
+	if (opcao == 1) calorias += 20;
+	if (opcao == 2) calorias += 70;
+	if (opcao == 3) calorias += 100;
+	if (opcao == 4) calorias += 65;
+	printf("Total de calorias: %d", calorias);		
 }
 
 //24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para cobrar dosmotoristas o DUT. Sabendo-se que o mês em que o emplacamento do carro deve ser renovado é determinado pelo último número da placa do mesmo, faça um programa que, a partir da leitura da placa do carro, informe omês em que o emplacamento deve ser renovado.
@@ -222,6 +283,8 @@ void questao25() {
 }
 
 int main() {
+	const char menu[1000] = "\n================================\n            PROGRAMAS\n================================\n[1]  - Adição\n[2]  - Adição 2\n[3]  - Múltiplo\n[4]  - Múltiplo 2\n[5]  - Múltiplo 3\n[6]  - Crédito\n[7]  - Intervalo\n[8]  - Menor/Maior\n[9]  - Idade\n[10] - Crescente\n[11] - Maior\n[12] - Idade 2\n[13] - Situação Aluno\n[14] - INSS\n[15] - Valor de Venda\n[16] - Natação\n[17] - Plano de Saúde\n[18] - Mês do Ano\n[19] - Arco e Flecha\n[20] - Crédito Especial\n[21] - Biblioteca\n[22] - Consumo Combustível\n[23] - Calorias\n[24] - Emplacamento\n[25] - Intimação\n================================\n";
+	printf("%s",menu);
 	int opcao;
 	printf("Digite a questão a ser executada: ");
 	scanf("%d", &opcao);
@@ -231,6 +294,12 @@ int main() {
 			break;
 		case 2:
 			questao02();
+			break;
+		case 5:
+			questao05();
+			break;
+		case 23:
+			questao23();
 			break;
 		default:
 			printf("Opção inválida!");
